@@ -9,7 +9,7 @@ Traditionally, vectors have been defined as quantities having both magnitude and
 
 .. math:: \mathbf{v} = (a,b)
 
-to show that the vector :math:`\mathbf{v}` consists of the ordered pair of numbers *a* and *b*. The number *a* is called the first (or *x*) component of :math:`\mathbf{v}`, and *b* is called the second (or *y*) component. Vector addition is performed component-wise: :math:`(a, b) + (c, d) = (a + c, b + d)`, and similarly for subtraction. If :math:`\alpha` is a scalar, then we define multiplication by the scalar :math:`\alpha text{ as } \alpha (a, b) = (\alpha a, \alpha b)`, and similarly for division by a (nonzero) scalar.
+to show that the vector :math:`\mathbf{v}` consists of the ordered pair of numbers *a* and *b*. The number *a* is called the first (or *x*) component of :math:`\mathbf{v}`, and *b* is called the second (or *y*) component. Vector addition is performed component-wise: :math:`(a, b) + (c, d) = (a + c, b + d)`, and similarly for subtraction. If :math:`\alpha` is a scalar, then we define multiplication by the scalar :math:`\alpha \text{ as } \alpha (a, b) = (\alpha a, \alpha b)`, and similarly for division by a (nonzero) scalar.
 
 The *norm* (or length, or magnitude) of a vector :math:`\mathbf{v} = (a, b)`, is
 
@@ -29,7 +29,7 @@ In some cases, only the direction of a vector is of interest, and in such cases 
 
 The vector :math:`N(\mathbf{v})` will be called the *unit vector* corresponding to :math:`\mathbf{v}`, or more simply the *direction* of :math:`\mathbf{v}`. Note that the zero vector has no direction.
 
-Since vectors are characterized by magnitude (norm) and direction, this gives two ways to compare vectors: we can compare either their magnitudes or their directions. If :math:`\mathbf{v} text{ and } \mathbf{w}` are vectors, then we can compare their norms by either taking the norm of the difference :math:`| \mathbf{v} - \mathbf{w}|` or the difference of the norms :math:`| \mathbf{v}| - |\mathbf{w}|`. It's not always made clear in verification studies which of these is meant, and in general these two quantities will be different. However, by making use of the triangle inequality it can be shown that there is a relation between them. To derive this, let :math:`\mathbf{z} = \mathbf{v} - \mathbf{w}`, from which we get :math:`\mathbf{v} = \mathbf{w} + \mathbf{z}`. Now taking norms and using the triangle inequality,
+Since vectors are characterized by magnitude (norm) and direction, this gives two ways to compare vectors: we can compare either their magnitudes or their directions. If :math:`\mathbf{v} \text{ and } \mathbf{w}` are vectors, then we can compare their norms by either taking the norm of the difference :math:`| \mathbf{v} - \mathbf{w}|` or the difference of the norms :math:`| \mathbf{v}| - |\mathbf{w}|`. It's not always made clear in verification studies which of these is meant, and in general these two quantities will be different. However, by making use of the triangle inequality it can be shown that there is a relation between them. To derive this, let :math:`\mathbf{z} = \mathbf{v} - \mathbf{w}`, from which we get :math:`\mathbf{v} = \mathbf{w} + \mathbf{z}`. Now taking norms and using the triangle inequality,
 
 .. math:: | \mathbf{v}| = | \mathbf{w} + \mathbf{z} | \leq | \mathbf{w}| + | \mathbf{z} | = | \mathbf{w} | + | \mathbf{v} - \mathbf{w}|
 
@@ -37,11 +37,11 @@ which gives
 
 .. math:: | \mathbf{v}| - | \mathbf{w}| \leq | \mathbf{v} - \mathbf{w}|
 
-Reversing the roles of :math:`\mathbf{v} text{ and } \mathbf{w}` now gives the result:
+Reversing the roles of :math:`\mathbf{v} \text{ and } \mathbf{w}` now gives the result:
 
 .. math:: | | \mathbf{v}| - | \mathbf{w}|| \leq | \mathbf{v} - \mathbf{w}|
 
-In the same manner, we can compare the directions of two different nonzero vectors :math:`\mathbf{v} text{ and } \mathbf{w}` by either the direction of the difference :math:`N(\mathbf{v} - \mathbf{w})`, or by the difference in the directions :math:`N(\mathbf{v}) - N(\mathbf{w})`. Unlike the case for magnitudes, however, there is in general no relationship at all between these two measures of direction difference.
+In the same manner, we can compare the directions of two different nonzero vectors :math:`\mathbf{v} \text{ and } \mathbf{w}` by either the direction of the difference :math:`N(\mathbf{v} - \mathbf{w})`, or by the difference in the directions :math:`N(\mathbf{v}) - N(\mathbf{w})`. Unlike the case for magnitudes, however, there is in general no relationship at all between these two measures of direction difference.
 
 __________________________
 
@@ -62,7 +62,7 @@ and, at each data point,
 
 .. math:: s_{fi} = | \mathbf{F}_i | = \sqrt{u_{fi}^2 + v_{fi}^2} \text{ and } s_{oi} = | \mathbf{O}_i | = \sqrt{u_{oi}^2 + v_{oi}^2}
 
-It will be convenient to denote the average forecast and observed wind vectors by :math:`\mathbf{F}_a text{ and } \mathbf{O}_a`:
+It will be convenient to denote the average forecast and observed wind vectors by :math:`\mathbf{F}_a \text{ and } \mathbf{O}_a`:
 
 .. math:: \mathbf{F}_a = \frac{1}{N} \sum_i \mathbf{F}_i \text{ and } \mathbf{O}_a = \frac{1}{N} \sum_i \mathbf{O}_i
 
@@ -105,7 +105,7 @@ FSTDEV and OSTDEV are the standard deviations of the forecast and observed wind 
 
 ___________________________
 
-FDIR and ODIR are the direction (angle) of :math:`\mathbf{F}_a text{ and } \mathbf{O}_a` with respect to the grid directions.
+FDIR and ODIR are the direction (angle) of :math:`\mathbf{F}_a \text{ and } \mathbf{O}_a` with respect to the grid directions.
 
 .. math:: \text{FDIR } = \text{ direction angle of } \mathbf{F}_a
 	  
@@ -127,7 +127,7 @@ VDIFF_SPEED is the length (*ie. speed*) of the vector difference between the ave
 
 .. math:: \text{VDIFF_SPEED } = | \mathbf{F}_a - \mathbf{O}_a |
 
-Note that this is *not* the same as the difference in lengths (speeds) of the average forecast and observed wind vectors. That quantity is called SPEED_ERR (see below). There is a relationship between these two statistics however: using some of the results obtained in the introduction to this appendix, we can say that :math:`| | \mathbf{F}_a | - | \mathbf{O}_a | | \leq | \mathbf{F}_a - \mathbf{O}_a |` or , equivalently, that :math:`| text{SPEED_ERR} | \leq text{VDIFF_SPEED}`.
+Note that this is *not* the same as the difference in lengths (speeds) of the average forecast and observed wind vectors. That quantity is called SPEED_ERR (see below). There is a relationship between these two statistics however: using some of the results obtained in the introduction to this appendix, we can say that :math:`| | \mathbf{F}_a | - | \mathbf{O}_a | | \leq | \mathbf{F}_a - \mathbf{O}_a |` or , equivalently, that :math:`| \text{SPEED_ERR} | \leq \text{VDIFF_SPEED}`.
 
 _________________________
 

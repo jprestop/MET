@@ -13,7 +13,7 @@ The most commonly used confidence interval about an estimate for a statistic (or
 
 .. math:: \theta \pm z_{\alpha / 2} \cdot V(\theta )
 
-where :math:`z_{\alpha / 2}` is the :math:`\alpha - text{th}` quantile of the standard normal distribution, and :math:`V(\theta )` is the standard error of the statistic (or parameter), :math:`\theta`. For example, the most common example is for the mean of a sample, :math:`X_1,\cdots,X_n`, of independent and identically distributed (iid) normal random variables with mean :math:`\mu` and variance :math:`\sigma`. Here, the mean is estimated by :math:`\frac{1}{n} \sum_{i=1}^n X_i = \bar{X}`, and the standard error is just the standard deviation of the random variables divided by the square root of the sample size. That is, :math:`V( \theta ) = V ( \bar{X} ) = \frac{\sigma}{\sqrt{n}}`, and this must be estimated by :math:`\hat{V} (\bar{X} )`, which is obtained here by replacing :math:`\sigma` by its estimate, :math:`\hat{\sigma}`, where :math:`\hat{\sigma} = \frac{1}{n - 1} \sum_{i=1}^n (X_i - \bar{X})^2`.
+where :math:`z_{\alpha / 2}` is the :math:`\alpha - \text{th}` quantile of the standard normal distribution, and :math:`V(\theta )` is the standard error of the statistic (or parameter), :math:`\theta`. For example, the most common example is for the mean of a sample, :math:`X_1,\cdots,X_n`, of independent and identically distributed (iid) normal random variables with mean :math:`\mu` and variance :math:`\sigma`. Here, the mean is estimated by :math:`\frac{1}{n} \sum_{i=1}^n X_i = \bar{X}`, and the standard error is just the standard deviation of the random variables divided by the square root of the sample size. That is, :math:`V( \theta ) = V ( \bar{X} ) = \frac{\sigma}{\sqrt{n}}`, and this must be estimated by :math:`\hat{V} (\bar{X} )`, which is obtained here by replacing :math:`\sigma` by its estimate, :math:`\hat{\sigma}`, where :math:`\hat{\sigma} = \frac{1}{n - 1} \sum_{i=1}^n (X_i - \bar{X})^2`.
 
 Mostly, the normal approximation is used as an asymptotic approximation. That is, the interval for :math:`\theta` may only be appropriate for large **n**. For small **n**, the mean has an interval based on the Student’s **t** distribution with **n-1** degrees of freedom. Essentially, :math:`z_{\alpha / 2}` of the question is replaced with the quantile of this **t** distribution. That is, the interval is given by 
 
@@ -36,11 +36,11 @@ where again, :math:`\sigma` is replaced by its estimate, :math:`\hat{\sigma}`, a
   * - Mean error
     - :math:`V(\bar{F} - \bar{O}) = \frac{\sigma_{F - O}}{\sqrt{n}}`, where :math:`\sigma_{F - O}` emphasizes that this is the estimated standard deviation of the errors, :math:`F - O`.
   * - Brier Score (BS)
-    - :math:`V(text{BS}) = \frac{1}{T} [\sum F^4 + \bar{O} (1 - 4 \sum F_{F | O=1}^3 + 6 \sum F_{F | O=1}^2 - 4 \sum F_{F | O=1}) - text{BS}^2]` where **F** is the **probability** forecast and **O** is the observation. See :ref:`Bradley et al, 2008 <Bradley-2008>` for derivation and details.
+    - :math:`V(\text{BS}) = \frac{1}{T} [\sum F^4 + \bar{O} (1 - 4 \sum F_{F | O=1}^3 + 6 \sum F_{F | O=1}^2 - 4 \sum F_{F | O=1}) - \text{BS}^2]` where **F** is the **probability** forecast and **O** is the observation. See :ref:`Bradley et al, 2008 <Bradley-2008>` for derivation and details.
   * - Peirce Skill Score (PSS)
-    - :math:`V(text{PSS}) = \sqrt{\frac{H(1 - H)}{n_H} + \frac{F(1 - F)}{n_F}}`, where **H** is the hit rate, **F** the false alarm rate, :math:`n_h` the number of hits and misses, and :math:`n_F` the number of false alarms and correct negatives.
+    - :math:`V(\text{PSS}) = \sqrt{\frac{H(1 - H)}{n_H} + \frac{F(1 - F)}{n_F}}`, where **H** is the hit rate, **F** the false alarm rate, :math:`n_h` the number of hits and misses, and :math:`n_F` the number of false alarms and correct negatives.
   * - Logarithm of the odds ratio (OR)
-    - :math:`V(\ln(text{OR})) = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}`, where the values in the denominators are the usual contingency table counts.
+    - :math:`V(\ln(\text{OR})) = \sqrt{\frac{1}{a} + \frac{1}{b} + \frac{1}{c} + \frac{1}{d}}`, where the values in the denominators are the usual contingency table counts.
 
 
 Other statistics in MET having parametric CIs that rely on the underlying sample to be at least approximately iid normal, but have a different form derived from the normality assumption on the sample include the variance, standard deviation, and the linear correlation coefficient. These are addressed subsequently.
@@ -56,7 +56,7 @@ The forecast/observation variance has CIs derived from the underlying sample bei
 .. math:: l(\sigma^2) = \frac{(n - 1)s^2}{\chi_{\alpha / 2,n - 1}^2} \text{ and } u(\sigma^2) = \frac{(n - 1)s^2}{\chi_{1 - \alpha / 2, n - 1}^2}
 
 
-respectively, where :math:`\chi_{\alpha , \nu}^2` is the :math:`\alpha - text{th}` quantile of the chi-square distribution with **n-1** degrees of freedom. Taking the square roots of the limits of :math:`l` yields the CI for the forecast/observation standard deviation.
+respectively, where :math:`\chi_{\alpha , \nu}^2` is the :math:`\alpha - \text{th}` quantile of the chi-square distribution with **n-1** degrees of freedom. Taking the square roots of the limits of :math:`l` yields the CI for the forecast/observation standard deviation.
 
 Finally, the linear correlation coefficient has limits given by 
 

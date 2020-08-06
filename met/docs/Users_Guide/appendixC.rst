@@ -85,9 +85,9 @@ The verification statistics for dichotomous variables are formulated using a con
     - :math:`T = \mathbf{n}_{11} + \mathbf{n}_{10} + \mathbf{n}_{01} + \mathbf{n}_{00}`
 
 
-The counts, :math:`n_{11}, n_{10}, n_{01}, text{and } n_{00},` are sometimes called the "Hits", "False alarms", "Misses", and "Correct rejections", respectively. 
+The counts, :math:`n_{11}, n_{10}, n_{01}, \text{and } n_{00},` are sometimes called the "Hits", "False alarms", "Misses", and "Correct rejections", respectively. 
 
-By dividing the counts in the cells by the overall total, T, the joint proportions, :math:`\mathbf{p}_{11}, \mathbf{p}_{10}, \mathbf{p}_{01}, text{and } \mathbf{p}_{00}` can be computed. Note that :math:`\mathbf{p}_{11} + \mathbf{p}_{10} + \mathbf{p}_{01} + \mathbf{p}_{00} = 1.` Similarly, if the counts are divided by the row (column) totals, conditional proportions, based on the forecasts (observations) can be computed. All of these combinations and the basic counts can be produced by the Point-Stat tool.
+By dividing the counts in the cells by the overall total, T, the joint proportions, :math:`\mathbf{p}_{11}, \mathbf{p}_{10}, \mathbf{p}_{01}, \text{and } \mathbf{p}_{00}` can be computed. Note that :math:`\mathbf{p}_{11} + \mathbf{p}_{10} + \mathbf{p}_{01} + \mathbf{p}_{00} = 1.` Similarly, if the counts are divided by the row (column) totals, conditional proportions, based on the forecasts (observations) can be computed. All of these combinations and the basic counts can be produced by the Point-Stat tool.
 
 The values in :numref:`table_2X2` can also be used to compute the F, O, and H relative frequencies that are produced by the NCEP Verification System, and the Point-Stat tool provides an option to produce the statistics in this form. In terms of the other statistics computed by the Point-Stat tool, F is equivalent to the Mean Forecast; H is equivalent to POD; and O is equivalent to the Base Rate. All of these statistics are defined in the subsections below. The Point-Stat tool also provides the total number of observations, **T**.
 
@@ -258,7 +258,7 @@ Logarithm of the Odds Ratio (LODDS)
 
 Called "LODDS" in CTS output :numref:`table_PS_format_info_CTS`
 
-LODDS transforms the odds ratio via the logarithm, which tends to normalize the statistic for rare events (:ref:`Stephenson 2000 <Stephenson-2000>`). However, it can take values of :math:`\pm\infty` when any of the contingency table counts is 0. LODDS is defined as :math:`text{LODDS} = ln(OR)`.
+LODDS transforms the odds ratio via the logarithm, which tends to normalize the statistic for rare events (:ref:`Stephenson 2000 <Stephenson-2000>`). However, it can take values of :math:`\pm\infty` when any of the contingency table counts is 0. LODDS is defined as :math:`\text{LODDS} = ln(OR)`.
 
 Odds Ratio Skill Score (ORSS)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -441,7 +441,7 @@ Mean Error Squared (ME2)
 
 Called "ME2" in CNT output :numref:`table_PS_format_info_CNT`
 
-The Mean Error Squared, ME2, is provided to give a complete breakdown of MSE in terms of squared Bias plus estimated variance of the error, as detailed below in the section on BCMSE. It is defined as :math:`text{ME2} = text{ME}^2`.
+The Mean Error Squared, ME2, is provided to give a complete breakdown of MSE in terms of squared Bias plus estimated variance of the error, as detailed below in the section on BCMSE. It is defined as :math:`\text{ME2} = \text{ME}^2`.
 
 A perfect forecast has ME2 = 0.
 
@@ -450,21 +450,21 @@ Multiplicative Bias
 
 Called "MBIAS" in CNT output :numref:`table_PS_format_info_CNT`
 
-Multiplicative bias is simply the ratio of the means of the forecasts and the observations: :math:`text{MBIAS} = \bar{f} / \bar{o}`
+Multiplicative bias is simply the ratio of the means of the forecasts and the observations: :math:`\text{MBIAS} = \bar{f} / \bar{o}`
 
 Mean-squared error (MSE)
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 Called "MSE" in CNT output :numref:`table_PS_format_info_CNT`
 
-MSE measures the average squared error of the forecasts. Specifically, :math:`text{MSE} = \frac{1}{n}\sum (f_{i} - o_{i})^{2}`.
+MSE measures the average squared error of the forecasts. Specifically, :math:`\text{MSE} = \frac{1}{n}\sum (f_{i} - o_{i})^{2}`.
 
 Root-mean-squared error (RMSE)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Called "RMSE" in CNT output :numref:`table_PS_format_info_CNT`
 
-RMSE is simply the square root of the MSE, :math:`text{RMSE} = \sqrt{text{MSE}}`. 
+RMSE is simply the square root of the MSE, :math:`\text{RMSE} = \sqrt{\text{MSE}}`. 
 
 
 Standard deviation of the error
@@ -479,7 +479,7 @@ Called "BCMSE" in CNT output :numref:`table_PS_format_info_CNT`
 
 MSE and RMSE are strongly impacted by large errors. They also are strongly impacted by large bias (ME) values. MSE and RMSE can range from 0 to infinity. A perfect forecast would have MSE = RMSE = 0.
 
-MSE can be re-written as :math:`text{MSE} = (\bar{f} - \bar{o})^{2} + s_{f}^{2} + s_{o}^{2} - 2s_{f} s_{o} r_{fo}`, where :math:`\bar{f} - \bar{o} = text{ME}` and :math:`s_f^2 + s_o^2 - 2 s_f s_o r_{fo}` is the estimated variance of the error, :math:`s_{fo}^2`. Thus, :math:`text{MSE} = text{ME}^2 + s_{f-o}^2`. To understand the behavior of MSE, it is important to examine both of the terms of MSE, rather than examining MSE alone. Moreover, MSE can be strongly influenced by ME, as shown by this decomposition.
+MSE can be re-written as :math:`\text{MSE} = (\bar{f} - \bar{o})^{2} + s_{f}^{2} + s_{o}^{2} - 2s_{f} s_{o} r_{fo}`, where :math:`\bar{f} - \bar{o} = \text{ME}` and :math:`s_f^2 + s_o^2 - 2 s_f s_o r_{fo}` is the estimated variance of the error, :math:`s_{fo}^2`. Thus, :math:`\text{MSE} = \text{ME}^2 + s_{f-o}^2`. To understand the behavior of MSE, it is important to examine both of the terms of MSE, rather than examining MSE alone. Moreover, MSE can be strongly influenced by ME, as shown by this decomposition.
 
 The standard deviation of the error, :math:`s_{f-o}`, is :math:`s_{f-o} = \sqrt{s_{f-o}^{2}} = \sqrt{s_{f}^{2} + s_{o}^{2} - 2 s_{f} s_{o} r_{fo}}`. 
 
@@ -490,7 +490,7 @@ Mean Absolute Error (MAE)
 
 Called "MAE" in CNT output :numref:`table_PS_format_info_CNT`
 
-The Mean Absolute Error (MAE) is defined as :math:`text{MAE} = \frac{1}{n} \sum|f_{i} - o_{i}|`.
+The Mean Absolute Error (MAE) is defined as :math:`\text{MAE} = \frac{1}{n} \sum|f_{i} - o_{i}|`.
 
 MAE is less influenced by large errors and also does not depend on the mean error. A perfect forecast would have MAE = 0.
 
@@ -499,7 +499,7 @@ Inter Quartile Range of the Errors (IQR)
 
 Called "IQR" in CNT output :numref:`table_PS_format_info_CNT`
 
-The Inter Quartile Range of the Errors (IQR) is the difference between the 75th and 25th percentiles of the errors. It is defined as :math:`text{IQR} = p_{75} (f_i - o_i) - p_{25} (f_i - o_i)`.
+The Inter Quartile Range of the Errors (IQR) is the difference between the 75th and 25th percentiles of the errors. It is defined as :math:`\text{IQR} = p_{75} (f_i - o_i) - p_{25} (f_i - o_i)`.
 
 IQR is another estimate of spread, similar to standard error, but is less influenced by large errors and also does not depend on the mean error. A perfect forecast would have IQR = 0.
 
@@ -508,7 +508,7 @@ Median Absolute Deviation (MAD)
 
 Called "MAD" in CNT output :numref:`table_PS_format_info_CNT`
 
-The Median Absolute Deviation (MAD) is defined as :math:`text{MAD} = text{median}|f_i - o_i|`.
+The Median Absolute Deviation (MAD) is defined as :math:`\text{MAD} = \text{median}|f_i - o_i|`.
 
 MAD is an estimate of spread, similar to standard error, but is less influenced by large errors and also does not depend on the mean error. A perfect forecast would have MAD = 0.
 
@@ -526,14 +526,14 @@ Root-mean-squared Forecast Anomaly
 
 Called "RMSFA" in CNT output :numref:`table_PS_format_info_CNT`
 
-RMSFA is the square root of the average squared forecast anomaly. Specifically, :math:`text{RMSFA} = \sqrt{\frac{1}{n} \sum(f_{i} - c_{i})^2}`.
+RMSFA is the square root of the average squared forecast anomaly. Specifically, :math:`\text{RMSFA} = \sqrt{\frac{1}{n} \sum(f_{i} - c_{i})^2}`.
 
 Root-mean-squared Observation Anomaly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Called "RMSOA" in CNT output :numref:`table_PS_format_info_CNT`
 
-RMSOA is the square root of the average squared observation anomaly. Specifically, :math:`text{RMSOA} = \sqrt{\frac{1}{n} \sum(o_{i} - c_{i})^2}`.
+RMSOA is the square root of the average squared observation anomaly. Specifically, :math:`\text{RMSOA} = \sqrt{\frac{1}{n} \sum(o_{i} - c_{i})^2}`.
 
 Percentiles of the errors
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -633,7 +633,7 @@ Vector anomaly L1 and L2 values
 
 Called "UFABAR", "VFABAR", "UOABAR", "VOABAR", "UVFOABAR", "UVFFABAR", "UVOOABAR" in VAL1L2 output :numref:`table_PS_format_info_VAL1L2`
 
-These statistics require climatological values for the wind vector components, :math:`u_c text{ and } v_c`. The measures are defined below:
+These statistics require climatological values for the wind vector components, :math:`u_c \text{ and } v_c`. The measures are defined below:
 
 .. math:: \text{UFABAR} = \text{Mean}(u_f - u_c) = \frac{1}{n} \sum_{i=1}^n (u_{fi} - u_c)
 
@@ -755,7 +755,7 @@ The Brier score is the mean squared probability error. In MET, the Brier Score (
 
 .. math:: \text{BS} = \frac{1}{T} \sum_{i=1}^K [n_{i1} (1 - p_i)^2 + n_{i0} p_i^2]
 
-The equation you will most often see in references uses the individual probability forecasts ( :math:`\rho_{i}`) and the corresponding observations ( :math:`o_{i}`), and is given as :math:`text{BS} = \frac{1}{T}\sum (p_i - o_i)^2`. This equation is equivalent when the midpoints of the binned probability values are used as the :math:`p_i` . 
+The equation you will most often see in references uses the individual probability forecasts ( :math:`\rho_{i}`) and the corresponding observations ( :math:`o_{i}`), and is given as :math:`\text{BS} = \frac{1}{T}\sum (p_i - o_i)^2`. This equation is equivalent when the midpoints of the binned probability values are used as the :math:`p_i` . 
 
 BS can be partitioned into three terms: (1) reliability, (2) resolution, and (3) uncertainty (:ref:`Murphy, 1987 <Murphy-1987>`).
 
@@ -887,9 +887,9 @@ Closed form expressions for the CRPS are difficult to define when using data rat
 
 .. math:: \text{crps}_i (N( \mu, \sigma^2),y) = \sigma ( \frac{y - \mu}{\sigma} (2 \Phi (\frac{y - \mu}{\sigma}) -1) + 2 \phi (\frac{y - \mu}{\sigma}) - \frac{1}{\sqrt{\pi}})
 
-In this equation, the y represents the event threshold. The estimated mean and standard deviation of the ensemble forecasts ( :math:`\mu text{ and } \sigma`) are used as the parameters of the normal distribution. The values of the normal distribution are represented by the probability density function (PDF) denoted by :math:`\Phi` and the cumulative distribution function (CDF), denoted in the above equation by :math:`\phi`. 
+In this equation, the y represents the event threshold. The estimated mean and standard deviation of the ensemble forecasts ( :math:`\mu \text{ and } \sigma`) are used as the parameters of the normal distribution. The values of the normal distribution are represented by the probability density function (PDF) denoted by :math:`\Phi` and the cumulative distribution function (CDF), denoted in the above equation by :math:`\phi`. 
 
-The overall CRPS is calculated as the average of the individual measures. In equation form: :math:`text{CRPS} = text{average(crps) } = \frac{1}{N} \sum_i^N text{crps}_i`.
+The overall CRPS is calculated as the average of the individual measures. In equation form: :math:`\text{CRPS} = \text{average(crps) } = \frac{1}{N} \sum_i^N \text{crps}_i`.
 
 The score can be interpreted as a continuous version of the mean absolute error (MAE). Thus, the score is negatively oriented, so smaller is better. Further, similar to MAE, bias will inflate the CRPS. Thus, bias should also be calculated and considered when judging forecast quality using CRPS.
 
@@ -907,7 +907,7 @@ IGN
 
 Called "IGN" in ECNT output :numref:`table_ES_header_info_es_out_ECNT`
 
-The ignorance score (IGN) is the negative logarithm of a predictive probability density function (:ref:`Gneiting et al, 2004 <Gneiting-2004>`). In MET, the IGN is calculated based on a normal approximation to the forecast distribution (i.e. a normal pdf is fit to the forecast values). This approximation may not be valid, especially for discontinuous forecasts like precipitation, and also for very skewed forecasts. For a single normal distribution **N** with parameters :math:`\mu text{ and } \sigma`, the ignorance score is
+The ignorance score (IGN) is the negative logarithm of a predictive probability density function (:ref:`Gneiting et al, 2004 <Gneiting-2004>`). In MET, the IGN is calculated based on a normal approximation to the forecast distribution (i.e. a normal pdf is fit to the forecast values). This approximation may not be valid, especially for discontinuous forecasts like precipitation, and also for very skewed forecasts. For a single normal distribution **N** with parameters :math:`\mu \text{ and } \sigma`, the ignorance score is
 
 .. math:: \text{ign} (N( \mu, \sigma),y) = \frac{1}{2} \ln (2 \pi \sigma^2 ) + \frac{(y - \mu)^2}{\sigma^2}.
 
@@ -982,7 +982,7 @@ Fractions Brier Score
 
 Called "FBS" in NBRCNT output :numref:`table_GS_format_info_NBRCNT`
 
-The Fractions Brier Score (FBS) is defined as :math:`text{FBS} = \frac{1}{N} \sum_N [\langle P_f\rangle_s - \langle P_o\rangle_s]^2`, where N is the number of neighborhoods; :math:`\langle P_{f} \rangle_{s}` is the proportion of grid boxes within a forecast neighborhood where the prescribed threshold was exceeded (i.e., the proportion of grid boxes that have forecast events); and :math:`\langle P_{o}\rangle_{s}` is the proportion of grid boxes within an observed neighborhood where the prescribed threshold was exceeded (i.e., the proportion of grid boxes that have observed events).
+The Fractions Brier Score (FBS) is defined as :math:`\text{FBS} = \frac{1}{N} \sum_N [\langle P_f\rangle_s - \langle P_o\rangle_s]^2`, where N is the number of neighborhoods; :math:`\langle P_{f} \rangle_{s}` is the proportion of grid boxes within a forecast neighborhood where the prescribed threshold was exceeded (i.e., the proportion of grid boxes that have forecast events); and :math:`\langle P_{o}\rangle_{s}` is the proportion of grid boxes within an observed neighborhood where the prescribed threshold was exceeded (i.e., the proportion of grid boxes that have observed events).
 
 Fractions Skill Score
 ~~~~~~~~~~~~~~~~~~~~~
@@ -1053,7 +1053,7 @@ The Baddeley's :math:`\Delta` Metric is given by
 
 .. math:: \Delta_{p,w} (A,B) = [ \frac{1}{N} \sum_{s \in D} | w(d(s,A)) - w(d(s,B))|]^{\frac{1}{P}}
 
-where :math:`d(s,\cdot)` is the distance map for the respective event area, :math:`w(\cdot)` is an optional concave function (i.e., :math:`w( t + u) \leq w(t)+w(u))` that is strictly increasing at zero with :math:`w(t)=0` if and only if :math:`t=0`, *N* is the size of the domain, and *p* is a user chosen parameter for the :math:`L_{p}` norm. The default choice of :math:`p = 2` corresponds to a Euclidean average, :math:`p = 1` is a simple average of the difference in distance maps, and the limiting case of :math:`p= \infty` gives the maximum difference between the two distance maps and is called the Hausdorff distance, denoted as :math:`H(A,B)`, and is the metric that motivated the development of Baddeley’s :math:`\Delta` metric. A typical choice, and the only available with MET, for :math:`w(\cdot) text{ is } w(t)= \min\{t,c\}`, where *c* is a user-chosen constant with :math:`c = \infty` meaning that :math:`w(\cdot)` is not applied. This choice of :math:`w(\cdot)` provides a cutoff for distances beyond the pre-specified amount given by *c*. 
+where :math:`d(s,\cdot)` is the distance map for the respective event area, :math:`w(\cdot)` is an optional concave function (i.e., :math:`w( t + u) \leq w(t)+w(u))` that is strictly increasing at zero with :math:`w(t)=0` if and only if :math:`t=0`, *N* is the size of the domain, and *p* is a user chosen parameter for the :math:`L_{p}` norm. The default choice of :math:`p = 2` corresponds to a Euclidean average, :math:`p = 1` is a simple average of the difference in distance maps, and the limiting case of :math:`p= \infty` gives the maximum difference between the two distance maps and is called the Hausdorff distance, denoted as :math:`H(A,B)`, and is the metric that motivated the development of Baddeley’s :math:`\Delta` metric. A typical choice, and the only available with MET, for :math:`w(\cdot) \text{ is } w(t)= \min\{t,c\}`, where *c* is a user-chosen constant with :math:`c = \infty` meaning that :math:`w(\cdot)` is not applied. This choice of :math:`w(\cdot)` provides a cutoff for distances beyond the pre-specified amount given by *c*. 
 
 In terms of distance maps, Baddeley’s :math:`\Delta` is the :math:`L_{p}` norm of the top left panel in :numref:`grid-stat_fig4` provided :math:`c= \infty`. If :math:`0<c< \infty`, then the distance maps in the bottom row of :numref:`grid-stat_fig3` would be replaced by *c* wherever they would otherwise exceed *c* before calculating their absolute differences in the top left panel of :numref:`grid-stat_fig4`. 
 
@@ -1091,7 +1091,7 @@ Pratt’s Figure of Merit (FOM) is given by
 
 .. math:: \text{FOM }(A,B) = \frac{1}{max(n_A , n_B)} \sum_{s \in B} \frac{1}{1 + \alpha d(s,A)^2 }
 
-where :math:`n_{A} text{and } n_{B}` are the number of events within event areas *A* and *B*, respectively, :math:`d(s,A)` is the distance map related to the event area *A*, and :math:`\alpha` is a user-defined scaling constant. The default, and usual choice, is :math:`\alpha = \frac{1}{9}` when the distances of the distance map are normalized so that the smallest nonzero distance between grid point neighbors equals one. Clearly, FOM is not a metric because like MED, it is not symmetric. Like MED, MET computes the minimum, maximum, and average of FOM_FO and FOM_OF.
+where :math:`n_{A} \text{and } n_{B}` are the number of events within event areas *A* and *B*, respectively, :math:`d(s,A)` is the distance map related to the event area *A*, and :math:`\alpha` is a user-defined scaling constant. The default, and usual choice, is :math:`\alpha = \frac{1}{9}` when the distances of the distance map are normalized so that the smallest nonzero distance between grid point neighbors equals one. Clearly, FOM is not a metric because like MED, it is not symmetric. Like MED, MET computes the minimum, maximum, and average of FOM_FO and FOM_OF.
 
 Note that :math:`d(s,A)` in the denominator is summed only over the grid squares falling within the event set *B*. That is, it represents the circular area in the top right panel of :numref:`grid-stat_fig4`. 
 
@@ -1104,7 +1104,7 @@ Called “ZHU_FO”, “ZHU_OF”, “ZHU_MIN”, “ZHU_MAX”, and “ZHU_MEAN
 
 Another measure incorporates the amount of actual overlap between the event sets across the fields in addition to the MED from above and was proposed by Zhu et al. (2011). Their main proposed measure was a comparative forecast performance measure of two competing forecasts against the same observation, which is not included here, but as defined is a true mathematical metric. They also proposed a similar measure of only the forecast against the observation, which is included in MET. It is simply
 
-.. math:: Z(A,B) = \lambda \sqrt{ \frac{1}{N} \sum_{s \in D} (I_F (s) - I_O (s))^2} + (1 - \lambda ) \cdot text{MED} (A,B)
+.. math:: Z(A,B) = \lambda \sqrt{ \frac{1}{N} \sum_{s \in D} (I_F (s) - I_O (s))^2} + (1 - \lambda ) \cdot \text{MED} (A,B)
 
 where MED *(A,B)* is as in the Mean-error distance, *N* is the total number of grid squares as in Baddeley's :math:`\Delta` metric, :math:`I_{F}(s) ((I_{O}(s))` is the binary field derived from the forecast (observation), and :math:`\lambda` is a user-chosen weight. The first term is just the RMSE of the binary forecast and observed fields, so it measures the average amount of overlap of event areas where zero would be a perfect score. It is not a metric because of the MED in the second term. A user might choose different weights depending on whether they want to emphasize the overlap or the MED terms more, but generally equal weight :math:`(\lambda=\frac{1}{2})` is sufficient. In Zhu et al (2011), they actually only consider :math:`Z(F,O)` and not :math:`Z(O,F)`, but both are included in MET for the same reasons as argued with MED. Similar to MED, the average of these two directions (avg Z), as well as the min and max are also provided for convenience. 
 
@@ -1117,7 +1117,7 @@ Several of the MET tools make use of percentiles in one way or another. Percenti
 
 The explanation makes use of the *floor* function. The floor of a real number *x*, denoted :math:`\lfloor x \rfloor`, is defined to be the greatest integer :math:`\leq x`. For example, :math:`\lfloor 3.01 \rfloor = 3, \lfloor 3.99 \rfloor = 3, \lfloor -3.01 \rfloor = -4, \lfloor -3.99 \rfloor = -4`. These examples show that the floor function does *not* simply round its argument to the nearest integer. Note also that :math:`\lfloor x \rfloor = x` if and only if *x* is an integer.
 
-Suppose now that we have a collection of *N* data points :math:`x_i text{for } i = 0, 1, 2, \ldots, N - 1`. (Note that we're using the C/C++ convention here, where array indices start at zero by default.) We will assume that the data are sorted in increasing (strictly speaking, *nondecreasing*) order, so that :math:`i \leq j text{ implies } x_i \leq x_j`. Suppose also that we wish to calculate the *t* percentile of the data, where :math:`0 \leq t < 1`. For example, :math:`t = 0.25` for the 25th percentile of the data. Define
+Suppose now that we have a collection of *N* data points :math:`x_i \text{for } i = 0, 1, 2, \ldots, N - 1`. (Note that we're using the C/C++ convention here, where array indices start at zero by default.) We will assume that the data are sorted in increasing (strictly speaking, *nondecreasing*) order, so that :math:`i \leq j \text{ implies } x_i \leq x_j`. Suppose also that we wish to calculate the *t* percentile of the data, where :math:`0 \leq t < 1`. For example, :math:`t = 0.25` for the 25th percentile of the data. Define
 
 .. math:: I = \lfloor (N - 1)t \rfloor
 
