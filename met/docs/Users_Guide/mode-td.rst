@@ -81,9 +81,9 @@ The spatial orientation of a object (what traditional MODE calls the **axis angl
 
    3D axis
 
-A simple integer count of the number of grid squares in an object for all of it's lifetime gives the **volume** of the object. Remember that while we're working in three dimensions, one of the dimensions is non-spatial, so one should not attempt to convert this to a volume in, e.g., :math:`\text{km}^3`.
+A simple integer count of the number of grid squares in an object for all of it's lifetime gives the **volume** of the object. Remember that while we're working in three dimensions, one of the dimensions is non-spatial, so one should not attempt to convert this to a volume in, e.g., :math:`text{km}^3`.
 
-The **start time** and **end time** of an object are attributes as well. These are integers reflecing at which time step an object starts and ends. These values are zero-based, so for example, if an object comes into existence at the :math:`\text{3}^{rd}` time step and lasts until the :math:`\text{9}^{th}` time step, then the start time and end time will be listed as 2 and 8, respectively. Note that this object has a lifetime of 7 time steps, not 6.
+The **start time** and **end time** of an object are attributes as well. These are integers reflecing at which time step an object starts and ends. These values are zero-based, so for example, if an object comes into existence at the :math:`text{3}^{rd}` time step and lasts until the :math:`text{9}^{th}` time step, then the start time and end time will be listed as 2 and 8, respectively. Note that this object has a lifetime of 7 time steps, not 6.
 
 **Centroid distance traveled** is the total great circle distance, in kilometers, traveled by the 2D spatial centroid over the lifetime of the object. In other words, at each time :math:`t` for which the 3D object exists, the set of points in the object also have that value of :math:`t` will together form a 2D spatial object. That 2D object will have a spatial centroid, which will move around as :math:`t` varies. This attribute represents this total 2D centroid movement over time.
 
@@ -497,19 +497,19 @@ The contents of the OBJECT_ID and OBJECT_CAT columns identify the objects using 
     - Angle that the axis makes with the grid x direction
   * - 32
     - INTENSITY_10
-    - :math:`\text{10}^{th}` percentile intensity in time slice
+    - :math:`text{10}^{th}` percentile intensity in time slice
   * - 33
     - INTENSITY_25
-    - :math:`\text{25}^{th}` percentile intensity in time slice
+    - :math:`text{25}^{th}` percentile intensity in time slice
   * - 34
     - INTENSITY_50
-    - :math:`\text{60}^{th}` percentile intensity in time slice
+    - :math:`text{60}^{th}` percentile intensity in time slice
   * - 35
     - INTENSITY_75
-    - :math:`\text{75}^{th}` percentile intensity in time slice
+    - :math:`text{75}^{th}` percentile intensity in time slice
   * - 36
     - INTENSITY_90
-    - :math:`\text{90}^{th}` percentile intensity in time slice
+    - :math:`text{90}^{th}` percentile intensity in time slice
   * - 37
     - INTENSITY_*
     - User-specified percentile intensity in time slice
@@ -570,19 +570,19 @@ The contents of the OBJECT_ID and OBJECT_CAT columns identify the objects using 
     - Total great circle distance travelled by the 2D spatial centroid over the lifetime of the 3D object
   * - 37
     - INTENSITY_10
-    - :math:`\text{10}^{th}` percentile intensity inside object
+    - :math:`text{10}^{th}` percentile intensity inside object
   * - 38
     - INTENSITY_25
-    - :math:`\text{25}^{th}` percentile intensity inside object
+    - :math:`text{25}^{th}` percentile intensity inside object
   * - 39
     - INTENSITY_50
-    - :math:`\text{50}^{th}` percentile intensity inside object
+    - :math:`text{50}^{th}` percentile intensity inside object
   * - 40
     - INTENSITY_75
-    - :math:`\text{75}^{th}` percentile intensity inside object
+    - :math:`text{75}^{th}` percentile intensity inside object
   * - 41
     - INTENSITY_90
-    - :math:`\text{90}^{th}` percentile intensity inside object
+    - :math:`text{90}^{th}` percentile intensity inside object
   * - 42
     - INTENSITY_*
     - User-specified percentile intensity inside object
