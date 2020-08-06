@@ -21,11 +21,9 @@ project = 'MET'
 copyright = '2020, NCAR'
 author = 'NCAR'
 
-# the stable version, displayed on front page of PDF
-version = '9.1'
-
 # The full version, including alpha/beta/rc tags
-release = f'{version}'
+release = '9.1'
+
 
 # -- General configuration ---------------------------------------------------
 
@@ -33,38 +31,6 @@ release = f'{version}'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['sphinx.ext.autodoc','sphinx.ext.intersphinx']
-
-# To enable PDF generation, set METPLUS_DOC_PDF environment variable
-#  sphinx 2.4.2+ and rst2pdf packages are required
-if os.environ.get('METPLUS_DOC_PDF'):
-    extensions.append('rst2pdf.pdfbuilder')
-
-# used for generating PDF
-pdf_documents = [('index',
-                  f'MET_Users_Guide_{version}',
-                  f'MET User\'s Guide',
-                  ('Tressa Fowler\\'
-                   'John Halley Gotway\\'
-                   'Randy Bullock\\'
-                   'Kathryn Newman\\'
-                   'Julie Prestopnik\\'
-                   'Lisa Goodrich\\'
-                   'Tara Jensen\\'
-                   'Barbara Brown\\'
-                   'Howard Soh\\'
-                   'Tatiana Burek\\'
-                   'Minna Win-Gildenmeister\\'
-                   'George McCabe\\'
-                   'David Fillmore\\'
-                   'Paul Prestopnik\\'
-                   'Eric Gilleland\\'
-                   'Nancy Rehak\\'
-                   'Paul Oldenburg\\'
-                   'Anne Holmes\\'
-                   'Lacey Holland\\'
-                   'David Ahijevych\\'
-                   'Bonny Strong\\'
-                   )),]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
